@@ -1,0 +1,23 @@
+{
+  "name": "belajar-nodejs-testing",
+  "version": "1.0.0",
+  "description": "belajar testing menggunakan Jest",
+  "main": "./src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "belajar",
+    "nodejs",
+    "jest",
+    "testing"
+  ],
+  "author": "abdu",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.25.3",
+    "babel-jest": "^29.7.0",
+    "jest": "^28.1.0"
+  }
+}

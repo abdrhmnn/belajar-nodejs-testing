@@ -1,0 +1,25 @@
+Testing dalam dunia software engineer itu ada 3:
+- Unit Test
+- Integration Test / Service Test
+- End to End Test / UI Test
+
+UI Test -> yaitu test yg dilakukan langsung dari frontend/client seperti mencoba menjalankan flow
+dari aplikasi (melakukan login, regis, search product, beli product, dll) seakan-akan seperti user aplikasi
+tentu ini akan menjalankan aplikasi frontend, backend, dan database yg digunakan jika ingin melakukan Testing
+
+Integration Test / Service Test -> test yg fokus ke satu service flow saja, jadi misal dalam satu aplikasi
+itu dia konek ke 2 service sekaligus, nah proses testing ini akan fokus ke 1 koneksi service dulu, seperti
+mengecek apakah koneksi nya berjalan dgn baik, data yg diambil dari db nya juga sudah benar, dll
+
+Unit Test -> testing komponen terkecil yg ada didalam service, seperti test method, response, controller, dll
+
+untuk belajar ini menggunakan library `Jest`
+
+library Babel itu gunanya untuk mentransform atau menyesuaikan kode dari file js untuk bisa berjalan dengan baik
+atau bisa digunakan/dibaca dengan baik di browser/depedency yg digunakan
+jadi seperti compiler file js, yg bisa digunakan untuk kompilasi kode js terbaru ke kode js lama yg berbeda versi
+supaya kode js nya bisa dijalankan dengan baik di teknologi baru maupun lama
+
+Jest sendiri sudah ada konfigurasi default nya, utk ubah bisa tambahkan key baru di package.json yaitu `jest`
+kemudian didalam nya tinggal set konfigurasi nya atau bisa dibuat di file terpisah dgn
+jalankan kode di terminal `npx jest --init`
