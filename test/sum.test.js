@@ -140,3 +140,45 @@ beforeAll(() => {
 afterAll(() => {
   console.info("After All berjalan tapi hanya sekali!")
 });
+
+// grouping test
+// kalo bikin before atau after di dalam grouping itu akan dijalankan secara local
+// kalo berada diluar itu akan tetap dijalankan di dalam describe()
+describe("test grouping test", () => {
+  test('test grouping sum', () => {
+    const result = sum(2, 3)
+    expect(result).toBe(5)
+  })
+
+  // bisa juga dikasih describe() atau nested grouping
+})
+
+// CODE COVERAGE
+// code coverage yaitu fitur dari Jest yg berfungsi untuk melihat/mengecek kode mana yg sudah tercakupi dgn
+// unit test dan mana yg belum, by default dia tidak pakai fitur ini, klo mau pake cukup ganti di
+// konfigurasi nya
+// setelah ubah konfigurasi dan jalankan coverage nya, itu akan buat folder coverage secara otomatis
+
+// Function global it()
+// fungsinya sama seperti fungsi test(), tidak ada bedanya cuma soal gaya koding setiap programmer saja
+// bs juga untuk async
+it("should be 4", () => {
+  const result = sum(2, 2)
+  expect(result).toBe(4)
+})
+
+// Function global skip()
+// untuk ignore unit test
+// bs juga untuk async
+it.skip("should be skipped", () => {
+  const result = sum(2, 2)
+  expect(result).toBe(5)
+})
+
+// function global only()
+// untuk menjalankan unit test yg menggunakan only()
+// bs juga untuk async
+it.only("only this test will be tested", () => {
+  const result = sum(2, 2)
+  expect(result).toBe(5)
+})
