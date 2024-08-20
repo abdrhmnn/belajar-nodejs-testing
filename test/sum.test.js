@@ -182,3 +182,23 @@ it.only("only this test will be tested", () => {
   const result = sum(2, 2)
   expect(result).toBe(5)
 })
+
+// function global toDo()
+// untuk membuat function tpi tidak akan dijalankan semacam `bikin todo list unit test`
+test.todo("create unit test for check sum() function")
+it.todo("create unit test for check sum() function version 2")
+
+// function global failing()
+// untuk handle skenario gagal dari unit test
+function sayHello2(name){
+  if(name){
+    return `Hello ${name}`
+  }
+  
+  throw new Error("Name belum dimasukkan!")
+}
+
+// didalam failing ini dia akan memaksa unit test nya error
+test.failing("this will handle error unit test case", () => {
+  sayHello2("abdu")
+})
